@@ -2,7 +2,7 @@
 {
   # Default apps
   environment.systemPackages = with pkgs; [
-  neovim wget curl libnotify swaynotificationcenter feh fuzzel alacritty tree vlc libreoffice-fresh nwg-look pavucontrol unp
+  neovim wget curl libnotify swaynotificationcenter networkmanagerapplet feh fuzzel alacritty tree vlc libreoffice-fresh nwg-look pavucontrol unp naps2
   ];
   programs.zsh.enable = true;
 

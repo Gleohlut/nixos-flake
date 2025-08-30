@@ -2,12 +2,14 @@
   description = "NixOS flake (nixos-unstable) with integrated Home Manager";
 
   inputs = {
-    # Rolling channel
-    nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+  # Unstable NixOS
+  nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
 
-    # Home Manager following unstable nixpkgs
-    home-manager.url = "github:nix-community/home-manager";
-    home-manager.inputs.nixpkgs.follows = "nixpkgs";
+  # Unstable Home Manager
+  home-manager.url = "github:nix-community/home-manager";
+
+  # Home Manager packages follow the system
+  home-manager.inputs.nixpkgs.follows = "nixpkgs";
   };
 
   outputs = { self, nixpkgs, home-manager, ... }:
@@ -15,10 +17,10 @@
     system = "x86_64-linux";
     host   = "L480";
   in {
-    nixosConfigurations.L480 = nixpkgs.lib.nixosSystem {
+    nixosConfigurations.${host} = nixpkgs.lib.nixosSystem {
       inherit system;
       modules = [
-        ./hosts/L480/base.nix
+        ./system/L480/base.nix
 
         # Keep flakes enabled declaratively
         ({ ... }: {
@@ -33,10 +35,9 @@
           home-manager.useGlobalPkgs = true;
           home-manager.useUserPackages = true;
 
-          home-manager.users.wumingshi = import ./home/wumingshi/home.nix;
+          home-manager.users.wumingshi = import ./user/wumingshi/home.nix;
         })
       ];
     };
   };
 }
-

@@ -31,7 +31,7 @@
   xdg.portal = {
   enable = true;
   # simplest way to silence the 1.17+ warning and be compatible
-  config.common.default = "*";
+  config.common.default = "gnome";
   # backends to install
   extraPortals = [
     pkgs.xdg-desktop-portal-gnome
