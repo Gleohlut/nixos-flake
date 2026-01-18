@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ ... }:
 {
   programs.yazi = {
     enable = true;
@@ -10,7 +10,7 @@
         ratio = [
           2
           4
-          3
+          4
         ];
         sort_by = "natural";
         sort_sensitive = false;
