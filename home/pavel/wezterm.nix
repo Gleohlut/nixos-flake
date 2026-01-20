@@ -27,7 +27,8 @@
       config.cursor_blink_ease_in = 'Constant'
       config.cursor_blink_ease_out = 'Constant'
       -- Misc
-      config.window_close_confirmation = "AlwaysPrompt"
+      config.check_for_updates = false
+      config.window_close_confirmation = "NeverPrompt"
       config.enable_wayland = true
       config.scrollback_lines = 10000
       -- Config auto reload

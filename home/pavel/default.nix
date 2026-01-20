@@ -8,6 +8,7 @@ let
   create_symlink = path: config.lib.file.mkOutOfStoreSymlink path;
   configs = {
     nvim = "nvim";
+    hypr = "hypr";
   };
 in
 {
@@ -47,6 +48,10 @@ in
     nwg-look
     grim
     slurp
-    libreoffice-fresh
+    jq
+    gcc
+    fzf
+    ripgrep
+    fd
   ];
 }
