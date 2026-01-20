@@ -53,5 +53,10 @@ in
     fzf
     ripgrep
     fd
+    poppler
+    ffmpeg
+    zoxide
+    resvg
+    imagemagick
   ];
 }

@@ -35,16 +35,5 @@
         ueberzug_scale = 1;
       };
     };
-    # extraPackages = with pkgs; [
-    #   poppler
-    #   ffmpeg
-    #   jq
-    #   fd
-    #   ripgrep
-    #   fzf
-    #   zoxide
-    #   resvg
-    #   imagemagick
-    # ];
   };
 }
