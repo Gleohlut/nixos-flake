@@ -9,6 +9,7 @@ let
   configs = {
     nvim = "nvim";
     hypr = "hypr";
+    yazi = "yazi";
   };
 in
 {

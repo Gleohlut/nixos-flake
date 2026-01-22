@@ -2,7 +2,7 @@
 {
   imports = [
     ./hardware-configuration.nix
-    ../../common
+    ../../modules
     ../../overlays/yazi-overlay.nix
   ];
   nix.settings = {
