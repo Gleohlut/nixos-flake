@@ -20,7 +20,6 @@ in
     ./sops.nix
     ./neovim.nix
     ./wezterm.nix
-    ./yazi.nix
     ./hyprland.nix
   ];
   home.username = "pavel";
@@ -36,13 +35,14 @@ in
 
   xdg.configFile = builtins.mapAttrs (name: subpath: {
     source = create_symlink "${dotfiles}/${subpath}";
-    recursive = true;
   }) configs;
 
   services.syncthing.enable = true;
 
   home.packages = with pkgs; [
     unp
+    neovim
+    yazi
     sops
     age
     naps2

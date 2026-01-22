@@ -57,7 +57,7 @@
                 backupFileExtension = "backup";
                 extraSpecialArgs = { inherit inputs self; };
                 sharedModules = [
-                  inputs."sops-nix".homeManagerModules.sops
+                  sops-nix.homeManagerModules.sops
                 ];
               };
             }

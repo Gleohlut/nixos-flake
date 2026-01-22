@@ -3,6 +3,6 @@
   home.packages = with pkgs; [
     hyprpaper
     hyprlock
-    rofi
   ];
+  programs.rofi.enable = true;
 }
