@@ -21,6 +21,7 @@ in
     ./neovim.nix
     ./wezterm.nix
     ./hyprland.nix
+    ./gaming.nix
   ];
   home.username = "pavel";
   home.homeDirectory = "/home/pavel";
@@ -60,4 +61,5 @@ in
     resvg
     imagemagick
   ];
+  programs.obsidian.enable = true;
 }
