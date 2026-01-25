@@ -22,6 +22,7 @@ in
     ./wezterm.nix
     ./hyprland.nix
     ./gaming.nix
+    ./zellij.nix
   ];
   home.username = "pavel";
   home.homeDirectory = "/home/pavel";
