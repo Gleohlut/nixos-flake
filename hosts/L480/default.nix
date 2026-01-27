@@ -1,4 +1,9 @@
-{ inputs, pkgs, ... }:
+{
+  inputs,
+  pkgs,
+  config,
+  ...
+}:
 {
   imports = [
     ./hardware-configuration.nix
@@ -122,7 +127,5 @@
   };
 
   services.fwupd.enable = true;
-  stylix.enable = true;
-  stylix.base16Scheme = "${pkgs.base16-schemes}/share/themes/gruvbox-dark-hard.yaml";
   system.stateVersion = "25.11";
 }

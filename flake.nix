@@ -17,7 +17,6 @@
     };
 
     yazi.url = "github:sxyazi/yazi";
-    wezterm.url = "github:wezterm/wezterm?dir=nix";
     stylix = {
       url = "github:nix-community/stylix";
       inputs.nixpkgs.follows = "nixpkgs";
