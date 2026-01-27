@@ -20,7 +20,7 @@
       }
       -- Font
       config.font = wezterm.font("BlexMono Nerd Font Mono")
-      config.font_size = 16
+      config.font_size = 12
       config.line_height = 1.2
       -- Cursor
       config.animation_fps = 1

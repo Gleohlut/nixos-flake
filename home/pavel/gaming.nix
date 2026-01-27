@@ -8,4 +8,11 @@
     protonup-qt
     gamemode
   ];
+  programs.mangohud = {
+    enable = true;
+    settings = {
+      fps_limit = 0;
+      preset = 1;
+    };
+  };
 }

@@ -19,7 +19,7 @@ in
     ./ssh.nix
     ./sops.nix
     ./neovim.nix
-    ./wezterm.nix
+    ./alacritty.nix
     ./hyprland.nix
     ./gaming.nix
     ./zellij.nix
