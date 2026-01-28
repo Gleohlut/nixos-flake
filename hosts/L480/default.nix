@@ -74,21 +74,23 @@
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
-  # Video
-  hardware.graphics = {
-    enable = true;
-    enable32Bit = true;
-    extraPackages = with pkgs; [
-      mesa
-      intel-media-driver # VA-API hardware video decode/encode
-    ];
+  # Hardware
+  hardware = {
+    cpu.intel.updateMicrocode = true;
+    graphics = {
+      enable = true;
+      enable32Bit = true;
+      extraPackages = with pkgs; [
+        mesa
+        intel-media-driver # VA-API hardware video decode/encode
+      ];
+    };
+    bluetooth = {
+      enable = true;
+      powerOnBoot = false;
+    };
   };
 
-  # Bluetooth
-  hardware.bluetooth = {
-    enable = true;
-    powerOnBoot = false;
-  };
   services.blueman.enable = true;
 
   # Fonts

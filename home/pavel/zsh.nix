@@ -14,14 +14,6 @@
     initContent = "
     PROMPT='%~ % '
     ";
-    oh-my-zsh = {
-      enable = true;
-      theme = "robbyrussell";
-      plugins = [
-        "git"
-        "zoxide"
-      ];
-    };
     profileExtra = ''
       if [ -z "$WAYLAND_DISPLAY" ] && [ "$XDG_VTNR" = 1 ]; then
         exec start-hyprland

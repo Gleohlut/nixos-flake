@@ -15,6 +15,7 @@ in
 {
   imports = [
     ./zsh.nix
+    ./starship.nix
     ./git.nix
     ./ssh.nix
     ./sops.nix
@@ -63,4 +64,5 @@ in
     imagemagick
   ];
   programs.obsidian.enable = true;
+  programs.discord.enable = true;
 }

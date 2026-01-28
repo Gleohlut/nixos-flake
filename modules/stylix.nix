@@ -4,6 +4,7 @@
     enable = true;
     base16Scheme = "${pkgs.base16-schemes}/share/themes/gruvbox-dark-hard.yaml";
     polarity = "dark";
+    opacity.terminal = 0.8;
     fonts = {
       monospace = {
         package = pkgs.dejavu_fonts;
