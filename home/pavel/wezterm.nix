@@ -1,14 +1,12 @@
-{ inputs, pkgs, ... }:
+{ ... }:
 {
   programs.wezterm = {
     enable = true;
-    package = inputs.wezterm.packages.${pkgs.stdenv.hostPlatform.system}.default;
     enableZshIntegration = true;
     extraConfig = ''
       local wezterm = require 'wezterm'
       local config = {}
       -- Appearance
-      config.color_scheme = 'GruvboxDarkHard'
       config.window_background_opacity = 0.6
       config.window_decorations = "RESIZE"
       config.enable_tab_bar = true

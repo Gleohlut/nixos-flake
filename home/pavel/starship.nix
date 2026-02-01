@@ -5,5 +5,6 @@
     settings = {
       add_newline = false;
     };
+    enableZshIntegration = true;
   };
 }

@@ -20,10 +20,9 @@ in
     ./ssh.nix
     ./sops.nix
     ./neovim.nix
-    ./alacritty.nix
+    ./wezterm.nix
     ./hyprland.nix
     ./gaming.nix
-    ./zellij.nix
   ];
   home.username = "pavel";
   home.homeDirectory = "/home/pavel";
@@ -44,7 +43,10 @@ in
 
   home.packages = with pkgs; [
     unp
+    unzip
     neovim
+    libreoffice-fresh
+    vlc
     yazi
     sops
     age
