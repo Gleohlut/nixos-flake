@@ -45,6 +45,8 @@ in
     unp
     unzip
     neovim
+    cryfs
+    fuse3
     libreoffice-fresh
     vlc
     yazi
