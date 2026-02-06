@@ -15,14 +15,6 @@
       "nix-command"
       "flakes"
     ];
-    extra-substituters = [
-      "https://yazi.cachix.org"
-      "https://wezterm.cachix.org"
-    ];
-    extra-trusted-public-keys = [
-      "yazi.cachix.org-1:Dcdz63NZKfvUCbDGngQDAZq6kOroIrFoyO064uvLh8k="
-      "wezterm.cachix.org-1:kAbhjYUC9qvblTE+s7S+kl5XM1zVa4skO+E/1IDWdH0="
-    ];
   };
 
   # Bootloader.
