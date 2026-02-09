@@ -9,7 +9,6 @@ let
   configs = {
     nvim = "nvim";
     hypr = "hypr";
-    yazi = "yazi";
   };
 in
 {
@@ -18,6 +17,7 @@ in
     ./starship.nix
     ./git.nix
     ./ssh.nix
+    ./yazi.nix
     ./sops.nix
     ./neovim.nix
     ./wezterm.nix
@@ -48,8 +48,8 @@ in
     cryfs
     fuse3
     libreoffice-fresh
+    qbittorrent
     vlc
-    yazi
     sops
     age
     naps2

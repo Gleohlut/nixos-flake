@@ -16,9 +16,17 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    yazi.url = "github:sxyazi/yazi";
     stylix = {
       url = "github:nix-community/stylix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    niri = {
+      url = "github:sodiboo/niri-flake";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    xwayland-satellite = {
+      url = "github:Supreeeme/xwayland-satellite";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
@@ -31,6 +39,7 @@
       home-manager,
       sops-nix,
       stylix,
+      niri,
       ...
     }:
     let
@@ -47,6 +56,7 @@
             home-manager.nixosModules.home-manager
             sops-nix.nixosModules.sops
             stylix.nixosModules.stylix
+            niri.nixosModules.niri
 
             {
               home-manager = {

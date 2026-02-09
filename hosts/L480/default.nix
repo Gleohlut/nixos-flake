@@ -8,7 +8,7 @@
   imports = [
     ./hardware-configuration.nix
     ../../modules
-    ../../overlays/yazi-overlay.nix
+    ../../modules/niri-unstable.nix
   ];
   nix.settings = {
     experimental-features = [
@@ -55,8 +55,6 @@
       "storage"
       "lp"
       "scanner"
-    ];
-    packages = with pkgs; [
     ];
   };
   programs.zsh.enable = true;
