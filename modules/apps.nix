@@ -6,6 +6,8 @@
     wget
     curl
     tree
+    sbctl
+    lon
     wl-clipboard
     libnotify
     swaynotificationcenter

@@ -69,4 +69,7 @@ in
   ];
   programs.obsidian.enable = true;
   programs.discord.enable = true;
+  programs.niri.config = null;
+  programs.niri.settings = null;
+
 }

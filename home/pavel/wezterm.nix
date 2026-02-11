@@ -8,7 +8,7 @@
       local config = {}
       -- Appearance
       config.window_background_opacity = 0.6
-      config.window_decorations = "RESIZE"
+      config.window_decorations = "NONE"
       config.enable_tab_bar = true
       config.window_padding = {
         left = 0,

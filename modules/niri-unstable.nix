@@ -8,7 +8,7 @@
   environment.systemPackages = with pkgs; [
     inputs.xwayland-satellite.packages.${pkgs.system}.default
     fuzzel
+    alacritty
     waybar
-    mako
   ];
 }
