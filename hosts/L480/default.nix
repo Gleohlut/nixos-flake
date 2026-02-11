@@ -9,6 +9,7 @@
     ./hardware-configuration.nix
     ../../modules
     ../../modules/niri-unstable.nix
+    ../../lanzaboote.nix
   ];
   nix.settings = {
     experimental-features = [
