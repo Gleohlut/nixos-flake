@@ -13,6 +13,7 @@ let
 in
 {
   imports = [
+    ./noctalia-config.nix
     ./zsh.nix
     ./starship.nix
     ./git.nix
