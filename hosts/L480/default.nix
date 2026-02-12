@@ -64,7 +64,11 @@
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
-
+  xdg.portal = {
+    enable = true;
+    extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
+    config.common.default = "gtk";
+  };
   # Hardware
   hardware = {
     cpu.intel.updateMicrocode = true;
@@ -83,7 +87,8 @@
   };
 
   services.blueman.enable = true;
-
+  services.power-profiles-daemon.enable = true;
+  services.upower.enable = true;
   # Fonts
   fonts = {
     enableDefaultPackages = true;

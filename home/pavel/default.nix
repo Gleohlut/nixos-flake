@@ -45,15 +45,13 @@ in
     unp
     unzip
     neovim
+    feh
     cryfs
     fuse3
-    libreoffice-fresh
     qbittorrent
-    vlc
     sops
     age
     naps2
-    nwg-look
     grim
     slurp
     jq
@@ -63,12 +61,10 @@ in
     fd
     poppler
     ffmpeg
-    zoxide
     resvg
     imagemagick
+    zoxide
   ];
-  programs.obsidian.enable = true;
-  programs.discord.enable = true;
   programs.niri.config = null;
   programs.niri.settings = null;
 
