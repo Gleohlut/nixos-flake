@@ -13,7 +13,6 @@ let
 in
 {
   imports = [
-    ./noctalia-config.nix
     ./zsh.nix
     ./starship.nix
     ./git.nix
@@ -22,7 +21,6 @@ in
     ./sops.nix
     ./neovim.nix
     ./wezterm.nix
-    ./hyprland.nix
     ./gaming.nix
   ];
   home.username = "pavel";
@@ -68,5 +66,5 @@ in
   ];
   programs.niri.config = null;
   programs.niri.settings = null;
-
+  programs.rofi.enable = true;
 }

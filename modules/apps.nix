@@ -13,6 +13,7 @@
     swaynotificationcenter
     pavucontrol
     font-manager
+    quickshell
   ];
 
   # Enable networking

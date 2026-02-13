@@ -80,13 +80,9 @@
         intel-media-driver # VA-API hardware video decode/encode
       ];
     };
-    bluetooth = {
-      enable = true;
-      powerOnBoot = false;
-    };
+    bluetooth.enable = true;
   };
 
-  services.blueman.enable = true;
   services.power-profiles-daemon.enable = true;
   services.upower.enable = true;
   # Fonts

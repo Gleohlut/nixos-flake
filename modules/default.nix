@@ -1,7 +1,6 @@
 { ... }:
 {
   imports = [
-    ./noctalia.nix
     ./sound.nix
     #    ./tlp.nix
     ./print_scan.nix
