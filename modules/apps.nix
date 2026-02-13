@@ -32,13 +32,22 @@
     gvfs.enable = true; # trash, network mounts, device integration
     tumbler.enable = true; # thumbnails
   };
+
   # Flatpak
   services.flatpak.enable = true;
+
   # Swap on zram
   zramSwap = {
     enable = true;
     memoryPercent = 25;
     algorithm = "zstd";
     priority = 100;
+  };
+
+  # Default desktop portal
+  xdg.portal = {
+    enable = true;
+    extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
+    config.common.default = "gtk";
   };
 }

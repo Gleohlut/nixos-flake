@@ -7,6 +7,7 @@
 
   environment.systemPackages = with pkgs; [
     inputs.xwayland-satellite.packages.${pkgs.system}.default
+    inputs.awww.packages.${pkgs.stdenv.hostPlatform.system}.awww
     fuzzel
     alacritty
     waybar

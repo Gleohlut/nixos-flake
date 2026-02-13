@@ -64,11 +64,6 @@
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
-  xdg.portal = {
-    enable = true;
-    extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
-    config.common.default = "gtk";
-  };
   # Hardware
   hardware = {
     cpu.intel.updateMicrocode = true;
@@ -80,11 +75,12 @@
         intel-media-driver # VA-API hardware video decode/encode
       ];
     };
-    bluetooth.enable = true;
+    bluetooth = {
+      enable = true;
+      powerOnBoot = false;
+    };
   };
-
-  services.power-profiles-daemon.enable = true;
-  services.upower.enable = true;
+  services.blueman.enable = true;
   # Fonts
   fonts = {
     enableDefaultPackages = true;

@@ -2,7 +2,7 @@
 {
   imports = [
     ./sound.nix
-    #    ./tlp.nix
+    ./tlp.nix
     ./print_scan.nix
     ./apps.nix
     ./stylix.nix

@@ -35,6 +35,8 @@
       url = "github:Supreeeme/xwayland-satellite";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    awww.url = "git+https://codeberg.org/LGFae/awww";
   };
 
   outputs =
