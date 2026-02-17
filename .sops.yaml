@@ -1,0 +1,8 @@
+keys:
+  - &pavel age14wpqrdmzazp20ru8pfzy83030zqexnk2wh785jwwj6szxmgx697sget67u
+
+creation_rules:
+  - path_regex: secrets/.*\.(yaml|yml|json|env|ini)$
+    key_groups:
+      - age:
+          - *pavel
