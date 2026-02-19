@@ -23,6 +23,7 @@ in
     ./wezterm.nix
     ./gaming.nix
     ./hyprland.nix
+    ./rclone.nix
   ];
   home.username = "pavel";
   home.homeDirectory = "/home/pavel";
@@ -42,20 +43,31 @@ in
   services.syncthing.enable = true;
 
   home.packages = with pkgs; [
+    # Archives
     unp
     unzip
+    unrar
+    zip
+    # Editor
     neovim
+    # Image viewer
     feh
+    # Encryption
     cryfs
     fuse3
     sirikali
+    # Torrent
     qbittorrent
+    # Secrets
     sops
     age
+    # Scanner
     naps2
+    # Screenshots
     grim
     slurp
     jq
+    # Finder/For Neovim
     gcc
     fzf
     ripgrep
@@ -64,6 +76,7 @@ in
     ffmpeg
     resvg
     imagemagick
+    # Better cd
     zoxide
   ];
   programs.rofi.enable = true;

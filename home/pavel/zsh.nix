@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ ... }:
 {
   programs.zsh = {
     enable = true;
@@ -14,10 +14,10 @@
     initContent = "
     PROMPT='%~ % '
     ";
-    #    profileExtra = ''
-    #      if [ -z "$WAYLAND_DISPLAY" ] && [ "$XDG_VTNR" = 1 ]; then
-    #       exec start-hyprland
-    #    fi
-    # '';
+    profileExtra = ''
+        if [ -z "$WAYLAND_DISPLAY" ] && [ "$XDG_VTNR" = 1 ]; then
+         exec start-hyprland
+      fi
+    '';
   };
 }

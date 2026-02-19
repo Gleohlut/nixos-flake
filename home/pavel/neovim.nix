@@ -4,12 +4,13 @@
     luajit
     tree-sitter
     # LSP
-    lua-language-server
-    nixd
+    lua-language-server # LUA
+    nixd # Nix
     # Formatters
     stylua # Lua
-    tombi
+    tombi # TOML
     prettier # HTML, CSS, JavaScript
     nixfmt # Nix
+    kdlfmt
   ];
 }

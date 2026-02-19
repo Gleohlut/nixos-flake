@@ -45,7 +45,8 @@ in
     brightnessctl
     networkmanagerapplet
   ];
-  # Define a user account. Don't forget to set a password with ‘passwd’.
+
+  # User account and shell. Don't forget to set a password with ‘passwd’.
   users.users.pavel = {
     isNormalUser = true;
     description = "Pavel";
@@ -58,32 +59,38 @@ in
       "storage"
       "lp"
       "scanner"
+      "fuse"
     ];
   };
   programs.zsh.enable = true;
 
+  # Autologin
   services.getty.autologinUser = "pavel";
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
-  # Hardware
-  hardware = {
-    cpu.intel.updateMicrocode = true;
-    graphics = {
-      enable = true;
-      package = pkgs-unstable.mesa;
-      enable32Bit = true;
-      package32 = pkgs-unstable.pkgsi686Linux.mesa;
-      extraPackages = with pkgs; [
-        intel-media-driver # VA-API hardware video decode/encode
-      ];
-    };
-    bluetooth = {
-      enable = true;
-      powerOnBoot = false;
-    };
+
+  # Microcode
+  hardware.cpu.intel.updateMicrocode = true;
+
+  # Hardware with Hyprland overrides
+  hardware.graphics = {
+    enable = true;
+    package = pkgs-unstable.mesa;
+    enable32Bit = true;
+    package32 = pkgs-unstable.pkgsi686Linux.mesa;
+    extraPackages = with pkgs; [
+      intel-media-driver # VA-API hardware video decode/encode
+    ];
+  };
+
+  # Bluetooth
+  hardware.bluetooth = {
+    enable = true;
+    powerOnBoot = false;
   };
   services.blueman.enable = true;
+
   # Fonts
   fonts = {
     enableDefaultPackages = true;

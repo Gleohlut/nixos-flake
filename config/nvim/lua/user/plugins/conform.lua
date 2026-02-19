@@ -18,6 +18,7 @@ return {
 				markdown = { "prettier" },
 				lua = { "stylua" },
 				nix = { "nixfmt" },
+				kdl = { "kdlfmt" },
 			},
 			format_on_save = {
 				lsp_fallback = true,

@@ -6,14 +6,18 @@
     wget
     curl
     tree
+    # Secure Boot
     sbctl
     lon
+    # Clipboard
     wl-clipboard
+    # Notifications
     libnotify
     swaynotificationcenter
+    # Sound
     pavucontrol
+    # Fonts
     font-manager
-    quickshell
   ];
 
   # Enable networking
