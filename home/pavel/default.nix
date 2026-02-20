@@ -79,7 +79,6 @@ in
     imagemagick
     # Better cd
     zoxide
-    wl-mirror
   ];
   programs.rofi.enable = true;
 
@@ -88,5 +87,12 @@ in
     # Avoid it messing with SSH agent; you only need secrets.
     components = [ "secrets" ];
   };
-  programs.niri.config = null;
+
+  wayland.windowManager.hyprland = {
+    enable = true;
+
+    plugins = [
+      inputs.hyprland-plugins.packages.${pkgs.stdenv.hostPlatform.system}.hyprscrolling
+    ];
+  };
 }

@@ -9,14 +9,10 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    niri = {
-      url = "github:sodiboo/niri-flake";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
-    xwayland-satellite = {
-      url = "github:Supreeeme/xwayland-satellite";
-      inputs.nixpkgs.follows = "nixpkgs";
+    hyprland.url = "github:hyprwm/Hyprland";
+    hyprland-plugins = {
+      url = "github:hyprwm/hyprland-plugins";
+      inputs.hyprland.follows = "hyprland";
     };
 
     lanzaboote = {

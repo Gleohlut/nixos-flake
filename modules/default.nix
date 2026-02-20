@@ -6,7 +6,7 @@
     ./print_scan.nix
     ./apps.nix
     ./stylix.nix
-    ./niri.nix
+    ./hyprland.nix
     ./screencasting.nix
   ];
 }
