@@ -22,7 +22,6 @@ in
     ./neovim.nix
     ./wezterm.nix
     ./gaming.nix
-    ./hyprland.nix
     ./rclone.nix
   ];
   home.username = "pavel";

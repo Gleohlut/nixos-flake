@@ -24,17 +24,14 @@
   ];
 
   systemd.user.services.xwayland-satellite = {
-    Unit = {
-      Description = "xwayland-satellite";
-      PartOf = [ "graphical-session.target" ];
-      After = [ "graphical-session.target" ];
-    };
-    Service = {
+    description = "xwayland-satellite";
+    wantedBy = [ "graphical-session.target" ];
+    partOf = [ "graphical-session.target" ];
+    after = [ "graphical-session.target" ];
+
+    serviceConfig = {
       ExecStart = "${lib.getExe pkgs.xwayland-satellite} :0";
       Restart = "on-failure";
-    };
-    Install = {
-      WantedBy = [ "graphical-session.target" ];
     };
   };
 }
