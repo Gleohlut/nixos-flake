@@ -6,7 +6,7 @@
     wget
     curl
     tree
-    # Secure Boot
+    # Security
     sbctl
     lon
     # Clipboard
@@ -18,6 +18,8 @@
     pavucontrol
     # Fonts
     font-manager
+    gcr
+    libsecret
   ];
 
   # Enable networking
@@ -54,4 +56,10 @@
     extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
     config.common.default = "gtk";
   };
+
+  # Provides org.freedesktop.secrets via D-Bus service definitions + daemon
+  services.gnome.gnome-keyring.enable = true;
+  security.pam.services.login.enableGnomeKeyring = true;
+  # Optional GUI to inspect/manage the keyring
+  programs.seahorse.enable = true;
 }

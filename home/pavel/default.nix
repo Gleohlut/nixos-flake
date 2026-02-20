@@ -80,4 +80,11 @@ in
     zoxide
   ];
   programs.rofi.enable = true;
+
+  services.gnome-keyring = {
+    enable = true;
+    # Avoid it messing with SSH agent; you only need secrets.
+    components = [ "secrets" ];
+  };
+  programs.niri.config = null;
 }
