@@ -1,4 +1,5 @@
 {
+  inputs,
   config,
   pkgs,
   ...
@@ -51,6 +52,7 @@ in
     neovim
     # Image viewer
     feh
+    inputs.awww.packages.${pkgs.stdenv.hostPlatform.system}.awww
     # Encryption
     cryfs
     fuse3
@@ -77,6 +79,7 @@ in
     imagemagick
     # Better cd
     zoxide
+    wl-mirror
   ];
   programs.rofi.enable = true;
 

@@ -7,5 +7,6 @@
     ./apps.nix
     ./stylix.nix
     ./niri.nix
+    ./screencasting.nix
   ];
 }

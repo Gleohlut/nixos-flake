@@ -20,6 +20,7 @@
     font-manager
     gcr
     libsecret
+    waybar
   ];
 
   # Enable networking
