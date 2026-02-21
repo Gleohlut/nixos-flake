@@ -43,7 +43,6 @@
       home-manager,
       sops-nix,
       stylix,
-      niri,
       lanzaboote,
       ...
     }:
@@ -61,7 +60,6 @@
             home-manager.nixosModules.home-manager
             sops-nix.nixosModules.sops
             stylix.nixosModules.stylix
-            niri.nixosModules.niri
             {
               home-manager = {
                 useGlobalPkgs = true;
