@@ -24,8 +24,6 @@ in
     ./wezterm.nix
     ./gaming.nix
     ./rclone.nix
-    ./hyprland.nix
-    ./hyprlock.nix
   ];
   home.username = "pavel";
   home.homeDirectory = "/home/pavel";

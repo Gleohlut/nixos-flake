@@ -13,6 +13,17 @@
       inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.xdg-desktop-portal-hyprland;
   };
 
+  xdg.portal = {
+    enable = true;
+    extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
+    config = {
+      common.default = [
+        "hyprland"
+        "gtk"
+      ];
+    };
+  };
+
   nix.settings = {
     substituters = [ "https://hyprland.cachix.org" ];
     trusted-substituters = [ "https://hyprland.cachix.org" ];
