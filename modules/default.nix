@@ -8,5 +8,6 @@
     ./stylix.nix
     ./hyprland.nix
     ./screencasting.nix
+    ./vm.nix
   ];
 }

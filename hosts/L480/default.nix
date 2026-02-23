@@ -56,6 +56,8 @@
       "lp"
       "scanner"
       "fuse"
+      "libvirtd"
+      "kvm"
     ];
   };
   programs.zsh.enable = true;
