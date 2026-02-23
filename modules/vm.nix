@@ -1,28 +1,18 @@
 { pkgs, ... }:
 {
-  programs.virt-manager.enable = true;
-
   virtualisation.libvirtd.enable = true;
-
   virtualisation.libvirtd.qemu = {
     runAsRoot = false;
-
-    swtpm.enable = true; # vTPM
-    ovmf = {
-      enable = true; # UEFI firmware
-      packages = [ pkgs.OVMFFull.fd ];
-    };
+    # Windows 11 vTPM support (TPM 2.0 device in virt-manager)
+    swtpm.enable = true;
   };
 
+  programs.virt-manager.enable = true;
+  security.polkit.enable = true;
   virtualisation.spiceUSBRedirection.enable = true;
 
-  dconf.settings = {
-    "org/virt-manager/virt-manager/connections" = {
-      autoconnect = [ "qemu:///system" ];
-      uris = [ "qemu:///system" ];
-    };
-  };
   environment.systemPackages = with pkgs; [
     virtio-win
+    swtpm
   ];
 }
