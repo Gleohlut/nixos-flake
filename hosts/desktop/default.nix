@@ -1,13 +1,14 @@
 {
   inputs,
   pkgs,
+  config,
+  lib,
+  self,
   ...
 }:
 {
   imports = [
     ./hardware-configuration.nix
-    ../../modules
-    ../../lanzaboote.nix
   ];
   nix.settings = {
     experimental-features = [
@@ -15,6 +16,11 @@
       "flakes"
     ];
   };
+  # Allow unfree packages
+  nixpkgs.config.allowUnfree = true;
+
+  # Host name
+  networking.hostName = "desktop";
 
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
@@ -22,23 +28,18 @@
 
   # Use latest kernel.
   boot.kernelPackages = pkgs.linuxPackages_latest;
-
-  networking.hostName = "hyprland-btw";
-
-  # Set your time zone.
+  # Time zone.
   time.timeZone = "Asia/Jakarta";
-
   # Select internationalisation properties.
   i18n.defaultLocale = "en_US.UTF-8";
-
   # Configure keymap in X11
   services.xserver.xkb = {
     layout = "us";
     variant = "";
   };
+
   # Host specific apps
   environment.systemPackages = with pkgs; [
-    brightnessctl
     networkmanagerapplet
   ];
 
@@ -62,14 +63,19 @@
   };
   programs.zsh.enable = true;
 
-  # Autologin
-  services.getty.autologinUser = "pavel";
-
-  # Allow unfree packages
-  nixpkgs.config.allowUnfree = true;
-
-  # Microcode
-  hardware.cpu.intel.updateMicrocode = true;
+  users.users.vanessa = {
+    isNormalUser = true;
+    description = "Vanessa";
+    shell = pkgs.zsh;
+    extraGroups = [
+      "networkmanager"
+      "audio"
+      "video"
+      "storage"
+      "lp"
+      "scanner"
+    ];
+  };
 
   # Graphics
   hardware.graphics = {
@@ -77,16 +83,8 @@
     enable32Bit = true;
     extraPackages = with pkgs; [
       mesa
-      intel-media-driver # VA-API hardware video decode/encode
     ];
   };
-
-  # Bluetooth
-  hardware.bluetooth = {
-    enable = true;
-    powerOnBoot = false;
-  };
-  services.blueman.enable = true;
 
   # Fonts
   fonts = {
@@ -124,5 +122,5 @@
   };
 
   services.fwupd.enable = true;
-  system.stateVersion = "25.11";
+  system.stateVersion = "26.05";
 }

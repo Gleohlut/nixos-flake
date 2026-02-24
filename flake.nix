@@ -68,6 +68,27 @@
             }
           ];
         };
+        desktop = nixpkgs.lib.nixosSystem {
+          inherit system;
+          specialArgs = { inherit inputs self; };
+          modules = [
+            ./hosts/desktop
+            home-manager.nixosModules.home-manager
+            stylix.nixosModules.stylix
+            {
+              home-manager = {
+                useGlobalPkgs = true;
+                useUserPackages = true;
+                users = {
+                  pavel = import ./home/pavel;
+                  vanessa = import ./home/vanessa;
+                };
+                backupFileExtension = "backup";
+                extraSpecialArgs = { inherit inputs self; };
+              };
+            }
+          ];
+        };
       };
     };
 }
