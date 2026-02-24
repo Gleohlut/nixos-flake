@@ -80,6 +80,8 @@ in
     imagemagick
     # Better cd
     zoxide
+    waybar
+    hyprlock
   ];
   programs.rofi.enable = true;
 

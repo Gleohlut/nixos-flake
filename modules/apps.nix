@@ -5,7 +5,6 @@
     git
     wget
     curl
-    tree
     # Security
     sbctl
     lon
@@ -20,7 +19,6 @@
     font-manager
     gcr
     libsecret
-    waybar
   ];
 
   # Enable networking
