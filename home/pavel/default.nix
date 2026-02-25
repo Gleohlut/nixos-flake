@@ -20,7 +20,6 @@ in
     ./starship.nix
     ./git.nix
     ./ssh.nix
-    ./yazi.nix
     ./sops.nix
     ./neovim.nix
     ./wezterm.nix
@@ -50,6 +49,7 @@ in
     unzip
     unrar
     zip
+    yazi
     # Editor
     neovim
     # Image viewer

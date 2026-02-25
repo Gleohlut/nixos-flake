@@ -1,26 +1,8 @@
-{ pkgs, ... }:
+{ ... }:
 {
-  # Default apps
-  environment.systemPackages = with pkgs; [
-    git
-    wget
-    curl
-    # Security
-    sbctl
-    lon
-    # Clipboard
-    wl-clipboard
-    # Notifications
-    libnotify
-    swaynotificationcenter
-    # Sound
-    pavucontrol
-    # Fonts
-    font-manager
-    gcr
-    libsecret
-  ];
 
+  # Allow unfree packages
+  nixpkgs.config.allowUnfree = true;
   # Enable networking
   networking.networkmanager.enable = true;
   networking.networkmanager.insertNameservers = [

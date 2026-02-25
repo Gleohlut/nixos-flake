@@ -6,7 +6,8 @@
 {
   imports = [
     ./hardware-configuration.nix
-    ../../modules
+    ../../modules/common
+    ../../modules/L480
     ../../lanzaboote.nix
   ];
   nix.settings = {

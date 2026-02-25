@@ -9,6 +9,8 @@
 {
   imports = [
     ./hardware-configuration.nix
+    ../../modules/common
+    ../../modules/desktop
   ];
   nix.settings = {
     experimental-features = [
@@ -16,8 +18,6 @@
       "flakes"
     ];
   };
-  # Allow unfree packages
-  nixpkgs.config.allowUnfree = true;
 
   # Host name
   networking.hostName = "desktop";
