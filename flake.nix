@@ -9,6 +9,11 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    niri = {
+      url = "github:sodiboo/niri-flake";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     lanzaboote = {
       url = "github:nix-community/lanzaboote/v1.0.0";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -38,6 +43,7 @@
       sops-nix,
       stylix,
       lanzaboote,
+      niri,
       ...
     }:
     let
@@ -54,6 +60,7 @@
             home-manager.nixosModules.home-manager
             sops-nix.nixosModules.sops
             stylix.nixosModules.stylix
+            niri.nixosModules.niri
             {
               home-manager = {
                 useGlobalPkgs = true;

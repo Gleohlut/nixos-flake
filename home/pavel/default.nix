@@ -98,4 +98,5 @@ in
       uris = [ "qemu:///system" ];
     };
   };
+  programs.niri.config = null;
 }
