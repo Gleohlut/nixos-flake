@@ -11,7 +11,9 @@ let
   configs = {
     nvim = "nvim";
     hypr = "hypr";
+    niri = "niri";
     yazi = "yazi";
+    swaylock = "swaylock";
   };
 in
 {
@@ -41,7 +43,10 @@ in
     source = create_symlink "${dotfiles}/${subpath}";
   }) configs;
 
-  services.syncthing.enable = true;
+  services.syncthing = {
+    enable = true;
+    settings.options.urAccepted = -1;
+  };
 
   home.packages = with pkgs; [
     # Archives
@@ -99,4 +104,5 @@ in
     };
   };
   programs.niri.config = null;
+  programs.swaylock.enable = true;
 }

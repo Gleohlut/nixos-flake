@@ -7,7 +7,7 @@
       local wezterm = require 'wezterm'
       local config = {}
       -- Appearance
-      config.window_background_opacity = 0.6
+      config.window_background_opacity = 0.9
       config.window_decorations = "NONE"
       config.enable_tab_bar = true
       config.window_padding = {
