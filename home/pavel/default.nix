@@ -45,6 +45,8 @@ in
 
   services.syncthing = {
     enable = true;
+    overrideDevices = false;
+    overrideFolders = false;
     settings.options.urAccepted = -1;
   };
 
@@ -57,15 +59,14 @@ in
     yazi
     # Editor
     neovim
-    # Image viewer
+    # Multimedia
     feh
     inputs.awww.packages.${pkgs.stdenv.hostPlatform.system}.awww
+    vlc
     # Encryption
     cryfs
     fuse3
     sirikali
-    # Torrent
-    qbittorrent
     # Secrets
     sops
     age
@@ -84,25 +85,26 @@ in
     ffmpeg
     resvg
     imagemagick
-    # Better cd
-    zoxide
+    # Compositor-related
     waybar
     hyprlock
+    swaylock
+    rofi
   ];
-  programs.rofi.enable = true;
-
+  # Keyring
   services.gnome-keyring = {
     enable = true;
     # Avoid it messing with SSH agent; you only need secrets.
     components = [ "secrets" ];
   };
 
+  # VM boilerplate
   dconf.settings = {
     "org/virt-manager/virt-manager/connections" = {
       autoconnect = [ "qemu:///system" ];
       uris = [ "qemu:///system" ];
     };
   };
+  # Turn off niri flake config
   programs.niri.config = null;
-  programs.swaylock.enable = true;
 }

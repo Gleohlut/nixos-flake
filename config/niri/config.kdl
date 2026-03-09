@@ -82,7 +82,7 @@ layout {
 }
 spawn-at-startup "waybar"
 spawn-at-startup "awww-daemon"
-spawn-sh-at-startup "awww img ~/Pictures/Wallpapers/3725.jpg"
+spawn-sh-at-startup "awww img ~/nixos-dotfiles/config/wallpapers/DSC04303.JPG"
 hotkey-overlay {
  // Uncomment this line to disable the "Important Hotkeys" pop-up at startup.
     // skip-at-startup

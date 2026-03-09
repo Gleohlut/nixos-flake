@@ -1,3 +1,11 @@
-clock
-indicator
-line-uses-ring
+daemonize
+ignore-empty-password
+show-failed-attempts
+
+show-keyboard-layout
+disable-caps-lock-text
+indicator-caps-lock
+scaling=fill
+font-size=14
+image=~/Pictures/Wallpapers/3725.jpg
+
