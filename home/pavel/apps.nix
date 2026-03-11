@@ -2,6 +2,8 @@
 {
   home.packages = with pkgs; [
     libreoffice-fresh
+    qbittorrent
+    zoom-us
     # Archives
     unp
     unzip
@@ -43,4 +45,5 @@
     swaylock
     rofi
   ];
+  programs.discord.enable = true;
 }

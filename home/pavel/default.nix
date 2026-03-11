@@ -12,7 +12,6 @@ let
     nvim = "nvim";
     hypr = "hypr";
     niri = "niri";
-    yazi = "yazi";
     swaylock = "swaylock";
   };
 in
@@ -28,6 +27,7 @@ in
     ./wezterm.nix
     ./gaming.nix
     ./rclone.nix
+    ./yazi.nix
   ];
   home.username = "pavel";
   home.homeDirectory = "/home/pavel";
