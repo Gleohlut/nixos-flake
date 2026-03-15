@@ -1,9 +1,6 @@
 { inputs, pkgs, ... }:
 {
   home.packages = with pkgs; [
-    libreoffice-fresh
-    qbittorrent
-    zoom-us
     # Archives
     unp
     unzip
@@ -16,7 +13,6 @@
     # Multimedia
     feh
     inputs.awww.packages.${pkgs.stdenv.hostPlatform.system}.awww
-    vlc
     # Encryption
     cryfs
     fuse3
@@ -45,5 +41,4 @@
     swaylock
     rofi
   ];
-  programs.discord.enable = true;
 }

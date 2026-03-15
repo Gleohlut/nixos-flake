@@ -15,4 +15,5 @@
       emoji = config.stylix.fonts.monospace;
     };
   };
+  stylix.targets.chromium.enable = false;
 }
